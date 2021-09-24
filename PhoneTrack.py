@@ -11,6 +11,14 @@ parser.add_argument ("-v", help= "Phone Number", type=str, dest='target', requir
 
 args = parser.parse_args()
 
+#colours used
+red = '\033[31m'
+yellow = '\033[93m'
+lgreen = '\033[92m'
+clear = '\033[0m'
+bold = '\033[01m'
+cyan = '\033[96m'
+
 number = args.target
 service_nmber = phonenumbers.parse(number, "RO")
 ch_nmber = phonenumbers.parse(number, "CH")
@@ -23,10 +31,3 @@ print(green+"[Country Found]: "+green, geocoder.country_name_for_number(ch_nmber
 print (green+"[City/Area]: "+green, geocoder.description_for_number(ch_nmber, "en"))
 print(green+"[Carrier]: "+green, carrier.name_for_number(service_nmber, "en"))
 print(green+"[Timezone]: "+green, timezone.time_zones_for_number(ch_nmber))
-
-except KeyboardInterrupt:
-        print ('Terminating, Bye'+lgreen)
-        sys.exit(0)
-except requests.exceptions.ConnectionError as e:
-        print (red+"[~]"+" check your internet connection!"+clear)
-sys.exit(1)
