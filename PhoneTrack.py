@@ -22,8 +22,7 @@ print(green+"[Local Format]: "+green, phonenumbers.region_code_for_country_code(
 print(green+"[Country Found]: "+green, geocoder.country_name_for_number(ch_nmber, "en"))
 print (green+"[City/Area]: "+green, geocoder.description_for_number(ch_nmber, "en"))
 print(green+"[Carrier]: "+green, carrier.name_for_number(service_nmber, "en"))
-print(green+"[Timezone]: "+green, timezone.time_zones_for_number(ch_nmber):
-)
+print(green+"[Timezone]: "+green, timezone.time_zones_for_number(ch_nmber))
 
 
 
