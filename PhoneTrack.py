@@ -24,14 +24,6 @@ print (green+"[City/Area]: "+green, geocoder.description_for_number(ch_nmber, "e
 print(green+"[Carrier]: "+green, carrier.name_for_number(service_nmber, "en"))
 print(green+"[Timezone]: "+green, timezone.time_zones_for_number(ch_nmber))
 
-
-
-if phonenumbers.is_possible_number(ch_nmber):
-            print('The number is valid and possible.')
-        else
-            print('The number is valid but might not be possible.')
-
-
 except KeyboardInterrupt:
         print ('Terminating, Bye'+lgreen)
         sys.exit(0)
