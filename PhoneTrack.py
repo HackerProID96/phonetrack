@@ -11,7 +11,11 @@ args = parser.parse_args()
 
 number = args.target
 ch_nmber = phonenumbers.parse(number, "CH")
-print (geocoder.description_for_number(ch_nmber, "en"))
+print("Internasional Code: ", phonenumbers.format_number(
+            PhoneNumberObject, phonenumbers.PhoneNumberFormat.INTERNATIONAL).split(' ')[0])
+print("Region Code: ", phonenumbers.region_code_for_country_code(
+            int(numberCountryCode))
+print ("City : ", geocoder.description_for_number(ch_nmber, "en"))
 
 
 from phonenumbers import carrier
