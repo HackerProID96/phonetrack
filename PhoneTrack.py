@@ -5,7 +5,7 @@ from sys import argv
 from phonenumbers import geocoder
 
 parser = argparse.ArgumentParser()
-parser.add_argument ("-v", help= "target/host IP address", type=str, dest='target', required=True )
+parser.add_argument ("-v", help= "Phone Number", type=str, dest='target', required=True )
 
 args = parser.parse_args()
 
