@@ -20,15 +20,15 @@ print(green+"[Internasional Format]: "+green, phonenumbers.format_number(
             PhoneNumberObject, phonenumbers.PhoneNumberFormat.INTERNATIONAL).split(' ')[0])
 print(green+"[Local Format]: "+green, phonenumbers.region_code_for_country_code(
             int(numberCountryCode))
-print(green+"[Country Found]: "+green, geocoder.country_name_for_number(PhoneNumberObject, "en"))
+print(green+"[Country Found]: "+green, geocoder.country_name_for_number(ch_nmber, "en"))
 print (green+"[City/Area]: "+green, geocoder.description_for_number(ch_nmber, "en"))
 print(green+"[Carrier]: "+green, carrier.name_for_number(service_nmber, "en"))
-print(green+"[Timezone]: "+green, timezone.time_zones_for_number(PhoneNumberObject):
+print(green+"[Timezone]: "+green, timezone.time_zones_for_number(ch_nmber):
 )
 
 
 
-if phonenumbers.is_possible_number(PhoneNumberObject):
+if phonenumbers.is_possible_number(ch_nmber):
             print('The number is valid and possible.')
         else:
             print('The number is valid but might not be possible.')
