@@ -1,14 +1,13 @@
 import phonenumbers
 import argparse
 import sys
-parser = argparse.ArgumentParser()
-parser.add_argument ("-v", help= "target/host IP address", type=str, dest='target', required=True )
 from sys import argv
 from phonenumbers import geocoder
 
+parser = argparse.ArgumentParser()
+parser.add_argument ("-v", help= "target/host IP address", type=str, dest='target', required=True )
+
 args = parser.parse_args()
-
-
 
 number = args.target
 ch_nmber = phonenumbers.parse(number, "CH")
