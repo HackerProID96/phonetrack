@@ -18,7 +18,7 @@ ch_nmber = phonenumbers.parse(number, "CH")
 print(red+"-------------------[PHONE NUMBER TRACKING]-------------------"+red)
 print(green+"[Internasional Format]: "+green, phonenumbers.format_number(
             PhoneNumberObject, phonenumbers.PhoneNumberFormat.INTERNATIONAL).split(' ')[0])
-print(green+[Local Format]: "+green, phonenumbers.region_code_for_country_code(
+print(green+"[Local Format]: "+green, phonenumbers.region_code_for_country_code(
             int(numberCountryCode))
 print(green+"[Country Found]: "+green, geocoder.country_name_for_number(PhoneNumberObject, "en"))
 print (green+"[City/Area]: "+green, geocoder.description_for_number(ch_nmber, "en"))
